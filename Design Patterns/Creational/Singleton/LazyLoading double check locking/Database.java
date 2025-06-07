@@ -1,0 +1,21 @@
+
+// normal
+public class Database {
+
+    private static Database instance;
+    private Database(){
+
+    }
+
+    public static Database getInstance() {
+        if (instance == null) {
+            synchronised {
+                  if (instance == null) {
+                          return new Database();
+                  }
+                  return instance;
+            }
+        }
+        return instance;
+    }
+}
